@@ -22,7 +22,21 @@ class Config(object):
             Production configuration
         """
 
+        ###
+        # Project Configs
+        ###
+
         DEBUG = False
+
+        ###
+        # LOG CONFIGS
+        ###
+
+        LOG_LEVEL = logging.INFO
+        LOG_FORMAT = '%(asctime)s %(levelname)-8s %(message)s'
+        LOG_DATEFORMAT = '%a, %d %b %Y %H:%M:%S'
+        LOG_FILEMODE = 'a'
+        LOG_BASE_PATH = '/var/log/'
 
         ###
         # Trello Configs
@@ -52,5 +66,16 @@ class Config(object):
             Development configuration
         """
 
+        ###
+        # Project Configs
+        ###
+
         DEBUG = True
+
+        ###
+        # LOG CONFIGS
+        ###
+
+        LOG_LEVEL = logging.DEBUG
+        LOG_BASE_PATH = ''
 
